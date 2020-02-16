@@ -1,0 +1,163 @@
+/* LIBS */
+@import 'libs/reset-normalize';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+
+
+/* PARTIALS */
+@import 'partials/_mixins';
+@import 'partials/_variables';
+@import 'partials/_fonts';
+@import 'partials/_helpers';
+@import 'partials/_keyframes';
+@import 'partials/_svg';
+@import 'partials/_flex';
+@import 'partials/_media';
+
+/* COMPONENTS */
+@import 'components/common';
+@import 'components/header';
+
+
+
+/* PAGES */
+
+
+
+
+
+
+/*========================= modal-styles =========================*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  margin: 20% auto;
+  padding: 5rem;
+  width: 30%;
+  position: relative;
+}
+
+.modal-close {
+  font-size: 2rem;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.25rem;
+  color: #000;
+}
+
+.modal-close:hover {
+  cursor: pointer;
+}
+
+
+
+
+/*========================= form-styles =========================*/
+
+.form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 50%;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputData {
+  margin: 0.5rem 0;
+  display: block;
+  width: 70%;
+  padding: 0.2rem;
+  padding-left: 0.4rem;
+  margin-bottom: 12px !important;
+}
+
+textarea {
+  resize: none;
+}
+.select {
+  margin-bottom: 12px !important;
+}
+.create-visit-button {
+  display: block;
+  height: 10%;
+  width: 10rem;
+  background-color: #fff;
+  border: 1px solid #084fc7;
+  border-radius: 10px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.cards-container {
+  display: flex!important;
+  flex-wrap: wrap!important;
+}
+.card {
+  width: calc(25% - 30px) !important;
+  margin: 15px 15px !important;
+  &.show {
+    & .card__content {
+      &--hidden {
+        display: block;
+      }
+    }
+  }
+  &__content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    & input {
+      border: none;
+      font-size: 14px;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+    & label {
+      font-size: 14px;
+      display: block !important;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    &--hidden {
+      display: none;
+    }
+  }
+}
+
+.extra-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.compact.selection {
+  width: 120px;
+}
+
+
+.footer-wrapper {
+  text-align: center;
+  padding: 40px 0;
+}
